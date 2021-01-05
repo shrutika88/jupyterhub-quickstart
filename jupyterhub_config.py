@@ -165,7 +165,42 @@ c.KubeSpawner.profile_list = [
             'image_spec': 'docker.io/jupyter/tensorflow-notebook:latest',
             'supplemental_gids': [100]
         }
-    }
+    },
+    {
+        'display_name': 'Jupyter Project - Base Notebook',
+        'kubespawner_override': {
+            'image_spec': 'docker.io/jupyter/base-notebook:latest',
+            'supplemental_gids': [100]
+        }
+    },
+    {
+        'display_name': 'Jupyter Project - R Notebook',
+        'kubespawner_override': {
+            'image_spec': 'docker.io/jupyter/r-notebook:latest',
+            'supplemental_gids': [100]
+        }
+    },
+    {
+        'display_name': 'Jupyter Project - Datascience Notebook',
+        'kubespawner_override': {
+            'image_spec': 'docker.io/jupyter/datascience-notebook:latest',
+            'supplemental_gids': [100]
+        }
+    },
+    {
+        'display_name': 'Jupyter Project - PySpark Notebook',
+        'kubespawner_override': {
+            'image_spec': 'docker.io/jupyter/pyspark-notebook:latest',
+            'supplemental_gids': [100]
+        }
+    },
+    {
+        'display_name': 'Jupyter Project - All Spark Notebook',
+        'kubespawner_override': {
+            'image_spec': 'docker.io/jupyter/all-spark-notebook:latest',
+            'supplemental_gids': [100]
+        }
+    }    
 ]
 
 c.KubeSpawner.extra_containers = []
