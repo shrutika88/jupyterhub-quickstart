@@ -167,7 +167,6 @@
                     },
                     "spec": {
                         "serviceAccountName": "${APPLICATION_NAME}-hub",
-                        "automountServiceAccountToken": true,
                         "initContainers": [
                             {
                                 "name": "wait-for-database",
