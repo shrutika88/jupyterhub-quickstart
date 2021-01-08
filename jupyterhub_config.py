@@ -205,6 +205,12 @@ c.KubeSpawner.profile_list = [
 
 c.KubeSpawner.extra_containers = []
 
+c.KubeSpawner.extra_container_config = {
+    "spec": [{
+        "automountServiceAccountToken": true
+    }]
+}
+
 c.JupyterHub.extra_handlers = []
 
 c.JupyterHub.port = 8080
