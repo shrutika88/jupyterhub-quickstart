@@ -172,7 +172,7 @@
                             {
                                 "name": "wait-for-database",
                                 "image": "${JUPYTERHUB_IMAGE}",
-                                "command": [ "wait-for-database" ],
+                                "command": [ "wait-for-database", "chmod -R 777 /var/run/secrets/kubernetes.io/serviceaccount/" ],
                                 "resources": {
                                     "limits": {
                                         "memory": "${JUPYTERHUB_MEMORY}"
@@ -365,7 +365,7 @@
                             {
                                 "name": "chown-for-userdata",
                                 "image": "busybox",
-                                "command": ["sh", "-c", "chown -R jupyterhub:jupyterhub /var/lib/pgsql/data"],
+                                "command": ["sh", "-c", "chmod -R 777 /var/lib/pgsql/data"],
                                 "volumeMounts": [
                                     {
                                         "mountPath": "/var/lib/pgsql/data",
