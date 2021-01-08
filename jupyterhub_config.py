@@ -206,7 +206,7 @@ c.KubeSpawner.profile_list = [
 c.KubeSpawner.extra_containers = []
 
 c.KubeSpawner.extra_pod_config = {
-    "automountServiceAccountToken": True
+    "automountServiceAccountToken": true
 }
 
 c.JupyterHub.extra_handlers = []
