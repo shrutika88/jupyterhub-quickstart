@@ -207,7 +207,7 @@ c.KubeSpawner.extra_containers = []
 
 c.KubeSpawner.extra_container_config = {
     "spec": [{
-        "automountServiceAccountToken": true
+        "automountServiceAccountToken": "true"
     }]
 }
 
