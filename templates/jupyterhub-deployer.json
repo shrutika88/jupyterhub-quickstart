@@ -365,8 +365,7 @@
                             {
                                 "name": "chown-for-userdata",
                                 "image": "busybox",
-                                "command": [ "sh", "-c", "chown -R postgres: /var/lib/pgsql/data" ]
-                                },
+                                "command": [ "sh", "-c", "chown -R postgres: /var/lib/pgsql/data" ],
                                 "volumeMounts": [
                                     {
                                         "mountPath": "/var/lib/pgsql/data",
