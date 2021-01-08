@@ -205,9 +205,7 @@ c.KubeSpawner.profile_list = [
 
 c.KubeSpawner.extra_containers = []
 
-c.KubeSpawner.extra_pod_config = {
-    "automountServiceAccountToken":true
-}
+c.KubeSpawner.extra_pod_config = {}
 
 c.JupyterHub.extra_handlers = []
 
@@ -257,6 +255,8 @@ else:
 c.JupyterHub.authenticator_class = 'tmpauthenticator.TmpAuthenticator'
 
 c.JupyterHub.spawner_class = 'kubespawner.KubeSpawner'
+
+c.KubeSpawner.service_account = 'default'
 
 c.KubeSpawner.image_spec = resolve_image_name(
         os.environ.get('JUPYTERHUB_NOTEBOOK_IMAGE',
