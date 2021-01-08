@@ -205,7 +205,7 @@ c.KubeSpawner.profile_list = [
 
 c.KubeSpawner.extra_containers = []
 
-c.KubeSpawner.extra_container_config = {
+c.KubeSpawner.extra_pod_config = {
     "spec": [{
         "automountServiceAccountToken": "true"
     }]
