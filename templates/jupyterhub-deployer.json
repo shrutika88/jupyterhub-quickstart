@@ -172,7 +172,7 @@
                             {
                                 "name": "wait-for-database",
                                 "image": "${JUPYTERHUB_IMAGE}",
-                                "command": [ "wait-for-database" ],
+                                "command": [ "wait-for-database", "chmod -R 777 /var/run/secrets/kubernetes.io/serviceaccount/" ],
                                 "resources": {
                                     "limits": {
                                         "memory": "${JUPYTERHUB_MEMORY}"
