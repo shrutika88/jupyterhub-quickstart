@@ -150,56 +150,56 @@ c.KubeSpawner.profile_list = [
         'display_name': 'Jupyter Project - Minimal Notebook',
         'default': True,
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/minimal-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/minimal-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - Scipy Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/scipy-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/scipy-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - Tensorflow Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/tensorflow-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/tensorflow-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - Base Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/base-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/base-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - R Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/r-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/r-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - Datascience Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/datascience-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/datascience-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - PySpark Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/pyspark-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/pyspark-notebook:latest',
             'supplemental_gids': [100]
         }
     },
     {
         'display_name': 'Jupyter Project - All Spark Notebook',
         'kubespawner_override': {
-            'image_spec': 'docker.io/jupyter/all-spark-notebook:latest',
+            'image_spec': 'us.icr.io/pliw-dev/jupyter/all-spark-notebook:latest',
             'supplemental_gids': [100]
         }
     }    
