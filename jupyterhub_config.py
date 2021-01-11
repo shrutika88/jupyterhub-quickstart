@@ -139,6 +139,8 @@ def resolve_image_name(name):
 
 c.Spawner.environment = dict()
 
+c.KubeSpawner.environment = { 'PYSPARK_PYTHON': 'python3' }
+
 c.JupyterHub.services = []
 
 c.KubeSpawner.init_containers = []
