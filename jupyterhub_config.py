@@ -145,6 +145,8 @@ c.JupyterHub.services = []
 
 c.KubeSpawner.init_containers = []
 
+c.KubeSpawner.image_pull_policy = 'Always'
+
 c.KubeSpawner.profile_list = [
     {
         'display_name': 'Jupyter Project - Minimal Notebook',
