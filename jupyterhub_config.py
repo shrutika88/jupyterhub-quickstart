@@ -266,6 +266,18 @@ c.KubeSpawner.image_spec = resolve_image_name(
         os.environ.get('JUPYTERHUB_NOTEBOOK_IMAGE',
         's2i-minimal-notebook:3.6'))
 
+c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
+
+# LDAP AUthentication--------------------------------------------
+
+c.LDAPAuthenticator.server_address = 'ldaps://bluepages.ibm.com'
+c.LDAPAuthenticator.server_port = 636
+c.LDAPAuthenticator.bind_dn_template = [
+    "uid={username},ou=bluepages,o=ibm.com"
+]
+
+# -----------------------------------------------------------------
+
 if os.environ.get('JUPYTERHUB_NOTEBOOK_MEMORY'):
     c.Spawner.mem_limit = convert_size_to_bytes(os.environ['JUPYTERHUB_NOTEBOOK_MEMORY'])
 
