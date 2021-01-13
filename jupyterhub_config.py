@@ -269,10 +269,10 @@ c.KubeSpawner.image_spec = resolve_image_name(
 
 # OAuth Authentication---------------------------------------------
 
-c.JupyterHub.authenticator_class = 'generic'
-c.OAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
-c.OAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
-c.OAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
+c.JupyterHub.authenticator_class = 'GenericOAuthenticator'
+c.GenericOAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
+c.GenericOAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
+c.GenericOAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
 c.GenericOAuthenticator.authorize_url =  'https://login.w3.ibm.com/oidc/endpoint/default/authorize'
 c.GenericOAuthenticator.token_url = 'https://login.w3.ibm.com/oidc/endpoint/default/token'
 c.GenericOAuthenticator.userdata_url = 'https://login.w3.ibm.com/oidc/endpoint/default/userinfo'
