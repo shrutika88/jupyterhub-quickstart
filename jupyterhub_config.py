@@ -267,7 +267,7 @@ c.KubeSpawner.image_spec = resolve_image_name(
         's2i-minimal-notebook:3.6'))
 
 
-OAuth Authentication---------------------------------------------
+# OAuth Authentication---------------------------------------------
 
 c.JupyterHub.authenticator_class = 'generic'
 c.OAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
