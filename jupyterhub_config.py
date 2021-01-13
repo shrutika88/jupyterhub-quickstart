@@ -277,7 +277,7 @@ c.GenericOAuthenticator.authorize_url =  'https://login.w3.ibm.com/oidc/endpoint
 c.GenericOAuthenticator.token_url = 'https://login.w3.ibm.com/oidc/endpoint/default/token'
 c.GenericOAuthenticator.userdata_url = 'https://login.w3.ibm.com/oidc/endpoint/default/userinfo'
 
------------------------------------------------------------------
+# -----------------------------------------------------------------
 
 # LDAP AUthentication--------------------------------------------
 #
