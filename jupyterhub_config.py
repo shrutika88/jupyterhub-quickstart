@@ -266,23 +266,36 @@ c.KubeSpawner.image_spec = resolve_image_name(
         os.environ.get('JUPYTERHUB_NOTEBOOK_IMAGE',
         's2i-minimal-notebook:3.6'))
 
-c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
+
+OAuth Authentication---------------------------------------------
+
+c.JupyterHub.authenticator_class = 'generic'
+c.OAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
+c.OAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
+c.OAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
+c.GenericOAuthenticator.authorize_url =  'https://login.w3.ibm.com/oidc/endpoint/default/authorize'
+c.GenericOAuthenticator.token_url = 'https://login.w3.ibm.com/oidc/endpoint/default/token'
+c.GenericOAuthenticator.userdata_url = 'https://login.w3.ibm.com/oidc/endpoint/default/userinfo'
+
+-----------------------------------------------------------------
 
 # LDAP AUthentication--------------------------------------------
-
-c.LDAPAuthenticator.server_address = '9.57.182.78'
-c.LDAPAuthenticator.server_port = 389
-c.lookup_dn = True
-c.LDAPAuthenticator.user_search_base = 'ou=bluepages,o=ibm.com'
-c.LDAPAuthenticator.user_attribute = 'mail'
-
-c.lookup_dn_user_dn_attribute = 'username'
-c.lookup_dn_search_filter = 'mail={login})'
-
-c.LDAPAuthenticator.valid_username_regex = '[A-Za-z0-9\-\_\.\+]{1,64}@[A-Za-z0-9\-\_\.]+\.[a-zA-Z]+'
-c.LDAPAuthenticator.use_ssl = False
-
-
+#
+#c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
+#
+#c.LDAPAuthenticator.server_address = '9.57.182.78'
+#c.LDAPAuthenticator.server_port = 389
+#c.lookup_dn = True
+#c.LDAPAuthenticator.user_search_base = 'ou=bluepages,o=ibm.com'
+#c.LDAPAuthenticator.user_attribute = 'mail'
+#
+#c.lookup_dn_user_dn_attribute = 'username'
+#c.lookup_dn_search_filter = 'mail={login})'
+#
+#c.LDAPAuthenticator.valid_username_regex = '[A-Za-z0-9\-\_\.\+]{1,64}@[A-Za-z0-9\-\_\.]+\.[a-zA-Z]+'
+#c.LDAPAuthenticator.use_ssl = False
+#
+#
 # -----------------------------------------------------------------
 
 if os.environ.get('JUPYTERHUB_NOTEBOOK_MEMORY'):
