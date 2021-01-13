@@ -270,7 +270,7 @@ c.KubeSpawner.image_spec = resolve_image_name(
 # OAuth Authentication---------------------------------------------
 
 from oauthenticator.generic import GenericOAuthenticator
-c.JupyterHub.authenticator_class = 'GenericOAuthenticator'
+c.JupyterHub.authenticator_class = GenericOAuthenticator
 c.GenericOAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
 c.GenericOAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
 c.GenericOAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
