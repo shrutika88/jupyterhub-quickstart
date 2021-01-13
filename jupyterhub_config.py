@@ -269,6 +269,7 @@ c.KubeSpawner.image_spec = resolve_image_name(
 
 # OAuth Authentication---------------------------------------------
 
+from oauthenticator.generic import GenericOAuthenticator
 c.JupyterHub.authenticator_class = 'GenericOAuthenticator'
 c.GenericOAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
 c.GenericOAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
