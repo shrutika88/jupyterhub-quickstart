@@ -270,11 +270,15 @@ c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
 
 # LDAP AUthentication--------------------------------------------
 
-c.LDAPAuthenticator.server_address = 'ldaps://9.57.182.78'
-c.LDAPAuthenticator.server_port = 636
-c.LDAPAuthenticator.bind_dn_template = [
-    "mail={username},ou=bluepages,o=ibm.com"
-]
+c.LDAPAuthenticator.server_address = '9.57.182.78'
+c.LDAPAuthenticator.server_port = 389
+c.lookup_dn = True
+c.LDAPAuthenticator.user_search_base = 'ou=bluepages,o=ibm.com'
+c.LDAPAuthenticator.user_attribute = 'mail'
+
+c.lookup_dn_user_dn_attribute = 'username'
+c.lookup_dn_search_filter = '({login_attr}={login})'
+
 c.LDAPAuthenticator.valid_username_regex = '[A-Za-z0-9\-\_\.\+]{1,64}@[A-Za-z0-9\-\_\.]+\.[a-zA-Z]+'
 c.LDAPAuthenticator.use_ssl = False
 
