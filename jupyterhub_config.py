@@ -271,7 +271,7 @@ c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
 # LDAP AUthentication--------------------------------------------
 
 c.LDAPAuthenticator.server_address = 'ldaps://9.57.182.78'
-c.LDAPAuthenticator.server_port = 389
+c.LDAPAuthenticator.server_port = 636
 c.LDAPAuthenticator.bind_dn_template = [
     "mail={username},ou=bluepages,o=ibm.com"
 ]
