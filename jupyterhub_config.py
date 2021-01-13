@@ -277,7 +277,7 @@ c.LDAPAuthenticator.user_search_base = 'ou=bluepages,o=ibm.com'
 c.LDAPAuthenticator.user_attribute = 'mail'
 
 c.lookup_dn_user_dn_attribute = 'username'
-c.lookup_dn_search_filter = '({login_attr}={login})'
+c.lookup_dn_search_filter = 'mail={login})'
 
 c.LDAPAuthenticator.valid_username_regex = '[A-Za-z0-9\-\_\.\+]{1,64}@[A-Za-z0-9\-\_\.]+\.[a-zA-Z]+'
 c.LDAPAuthenticator.use_ssl = False
