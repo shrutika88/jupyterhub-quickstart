@@ -139,7 +139,9 @@ def resolve_image_name(name):
 
 c.Spawner.environment = dict()
 
-c.KubeSpawner.environment = { 'PYSPARK_PYTHON': 'python3' }
+c.KubeSpawner.environment = { 'PYSPARK_PYTHON': 'python3',
+                              'GITHUB_HOST': 'https://github.ibm.com/'
+                            }
 
 c.JupyterHub.services = []
 
@@ -269,6 +271,7 @@ c.KubeSpawner.image_spec = resolve_image_name(
 
 # Github Authentication---------------------------------------------
 
+from oauthenticator.github import GitHubOAuthenticator
 c.JupyterHub.authenticator_class = GitHubOAuthenticator
 c.GitHubOAuthenticator.client_id = '4275c9220d51711da142'
 c.GitHubOAuthenticator.client_secret = '1e872ed329b65c00877e5fa38f69b194186f8a7e'
