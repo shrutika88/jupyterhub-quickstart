@@ -237,10 +237,6 @@
                                     {
                                         "name": "JUPYTERHUB_COOKIE_SECRET",
                                         "value": "${COOKIE_SECRET}"
-                                    },
-                                    {
-                                        "name": "GITHUB_HOST",
-                                        "value": "github.ibm.com"
                                     }
                                 ],
                                 "volumeMounts": [
