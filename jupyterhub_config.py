@@ -276,6 +276,8 @@ c.JupyterHub.authenticator_class = GitHubOAuthenticator
 c.GitHubOAuthenticator.client_id = '4275c9220d51711da142'
 c.GitHubOAuthenticator.client_secret = '1e872ed329b65c00877e5fa38f69b194186f8a7e'
 c.GitHubOAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
+c.Authenticator.admin_users = {'jan-fromann'}
+c.Authenticator.whitelist = {'jan-fromann', 'fabian-rodriguez', 'David-Horneber', 'Jan-Mihlin', 'Bijendra-Kumar', 'Harshitha-K-P', 'Sourav-Mahanty1', 'Harish CN?'}
 
 # -----------------------------------------------------------------
 
