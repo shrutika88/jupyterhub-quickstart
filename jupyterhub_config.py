@@ -267,16 +267,26 @@ c.KubeSpawner.image_spec = resolve_image_name(
         's2i-minimal-notebook:3.6'))
 
 
+# Github Authentication---------------------------------------------
+
+from oauthenticator.github.GitHubOAuthenticator
+c.JupyterHub.authenticator_class = GenericOAuthenticator
+c.GenericOAuthenticator.client_id = '4275c9220d51711da142'
+c.GenericOAuthenticator.client_secret = '1e872ed329b65c00877e5fa38f69b194186f8a7e'
+c.GenericOAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
+
+# -----------------------------------------------------------------
+
 # OAuth Authentication---------------------------------------------
 
-from oauthenticator.generic import GenericOAuthenticator
-c.JupyterHub.authenticator_class = GenericOAuthenticator
-c.GenericOAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
-c.GenericOAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
-c.GenericOAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
-c.GenericOAuthenticator.authorize_url =  'https://login.w3.ibm.com/oidc/endpoint/default/authorize'
-c.GenericOAuthenticator.token_url = 'https://login.w3.ibm.com/oidc/endpoint/default/token'
-c.GenericOAuthenticator.userdata_url = 'https://login.w3.ibm.com/oidc/endpoint/default/userinfo'
+#from oauthenticator.generic import GenericOAuthenticator
+#c.JupyterHub.authenticator_class = GenericOAuthenticator
+#c.GenericOAuthenticator.client_id = 'OWM0YzZkNGItOWQwYy00'
+#c.GenericOAuthenticator.client_secret = 'ZjA0ZmFlN2YtMmM5Yi00'
+#c.GenericOAuthenticator.oauth_callback_url = 'https://jupyterhub-jhub.pliw-dev-project-fea616cf4d600f64791f718d08fbeee6-0000.us-south.containers.appdomain.cloud/hub/oauth_callback'
+#c.GenericOAuthenticator.authorize_url =  'https://login.w3.ibm.com/oidc/endpoint/default/authorize'
+#c.GenericOAuthenticator.token_url = 'https://login.w3.ibm.com/oidc/endpoint/default/token'
+#c.GenericOAuthenticator.userdata_url = 'https://login.w3.ibm.com/oidc/endpoint/default/userinfo'
 
 # -----------------------------------------------------------------
 
