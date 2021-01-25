@@ -273,7 +273,7 @@ c.KubeSpawner.image_spec = resolve_image_name(
 c.KubeSpawner.user_storage_pvc_ensure = True
 
 # c.KubeSpawner.pvc_name_template = '%s-nb-{username}' % c.KubeSpawner.hub_connect_ip
-c.KubeSpawner.pvc_name_template = 'pvc-nb-{username}' % c.KubeSpawner.hub_connect_ip
+c.KubeSpawner.pvc_name_template = 'pvc-nb-{username}'
 c.KubeSpawner.user_storage_capacity = '1Gi'
 
 c.KubeSpawner.volumes = [
