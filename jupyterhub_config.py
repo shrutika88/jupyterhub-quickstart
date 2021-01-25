@@ -288,7 +288,7 @@ c.KubeSpawner.volumes = [
 c.KubeSpawner.volume_mounts = [
     {
         'name': 'data',
-        'mountPath': '/home/joyvan/work/src'
+        'mountPath': '/opt/app-root/src'
     }
 ]
 
