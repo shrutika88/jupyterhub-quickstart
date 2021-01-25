@@ -268,6 +268,30 @@ c.KubeSpawner.image_spec = resolve_image_name(
         os.environ.get('JUPYTERHUB_NOTEBOOK_IMAGE',
         's2i-minimal-notebook:3.6'))
 
+# Persist notebooks--------------------------------------------------------------------
+
+c.KubeSpawner.user_storage_pvc_ensure = True
+
+c.KubeSpawner.pvc_name_template = '%s-nb-{username}' % c.KubeSpawner.hub_connect_ip
+c.KubeSpawner.user_storage_capacity = '1Gi'
+
+c.KubeSpawner.volumes = [
+    {
+        'name': 'data',
+        'persistentVolumeClaim': {
+            'claimName': c.KubeSpawner.pvc_name_template
+        }
+    }
+]
+
+c.KubeSpawner.volume_mounts = [
+    {
+        'name': 'data',
+        'mountPath': '/opt/app-root/src'
+    }
+]
+
+
 
 # Github Authentication---------------------------------------------
 
