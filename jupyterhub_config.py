@@ -268,6 +268,10 @@ c.KubeSpawner.image_spec = resolve_image_name(
         os.environ.get('JUPYTERHUB_NOTEBOOK_IMAGE',
         's2i-minimal-notebook:3.6'))
 
+c.Spawner.default_url = '/opt/app-root/src'
+c.Spawner.notebook_dir = '/opt/app-root/src'
+
+
 # Persist notebooks--------------------------------------------------------------------
 
 c.KubeSpawner.user_storage_pvc_ensure = True
