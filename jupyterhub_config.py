@@ -269,7 +269,7 @@ c.KubeSpawner.image_spec = resolve_image_name(
         's2i-minimal-notebook:3.6'))
 
 # c.Spawner.default_url = '/tree/home/joyvan'
-c.Spawner.notebook_dir = '/'
+c.Spawner.notebook_dir = '/opt/app-root/src'
 
 
 # Persist notebooks--------------------------------------------------------------------
